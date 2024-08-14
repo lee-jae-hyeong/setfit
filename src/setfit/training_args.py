@@ -216,7 +216,7 @@ class TrainingArguments:
     save_strategy: str = "steps"
     save_steps: int = 500
     save_total_limit: Optional[int] = 1
-
+    eval_strategy = "epoch"
     load_best_model_at_end: bool = False
     metric_for_best_model: str = field(default="embedding_loss", repr=False)
     greater_is_better: bool = field(default=False, repr=False)
